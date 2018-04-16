@@ -59,6 +59,7 @@ namespace DinnerPartySimpleApp
 
         public decimal CalculateCost()
         {
+
             decimal totalCost = numberOfPeople * (costOfBeveragesPerPerson + costOfFoodPerPerson) + costOfDecorations;
             if (discount)
             {

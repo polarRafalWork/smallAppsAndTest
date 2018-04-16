@@ -32,6 +32,7 @@ namespace DinnerPartySimpleApp
 
         private void DisplayDinnerPartyCost()
         {
+            dinnerParty.CalculateCostOfDecorations(checkBoxFancy.Checked);
             decimal Cost = dinnerParty.CalculateCost();
             labelKoszt.Text = Cost.ToString("c");
         }
@@ -44,7 +45,6 @@ namespace DinnerPartySimpleApp
 
         private void checkBoxFancy_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.CalculateCostOfDecorations(checkBoxFancy.Checked);
             DisplayDinnerPartyCost();
         }
 
